@@ -1,0 +1,333 @@
+
+
+header {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+              url(../img/header-bg.png) center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 600px;
+}
+
+/* header::before 一个有透明度的遮罩也可实现背景变暗的效果，
+但因为是直接覆盖，会出现图层遮挡问题 */
+/* header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background:rgba(0, 0, 0, 0.6);
+} */
+
+header .navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+header .logo {
+  display: inline-block;
+  color: #baa45b;
+  font-size: 32px;
+  margin: 5px 0 0 10px;
+}
+
+header .nav {
+  display: inline-flex; 
+  justify-content: space-around;
+}
+
+header .nav a {
+  display: inline-block;
+  color: #fbf9da;
+  font-size: 16px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+header .nav a:hover{
+  background: #baa45b;
+}
+
+header .introduction {
+  color: #fbf9da;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+header h2 {
+  font-size: 46px;
+  margin-top: 20px;;
+}
+
+header .button,
+section .button {
+  display: inline-block;
+  font-size: 18px;
+  color: #fbf9da;
+  background: #baa45b;
+  border-radius: 4px;
+  padding: 10px 30px;
+  margin-top: 40px;
+}
+
+header .button:hover,
+section .button:hover {
+  opacity: 0.8;
+}
+
+/* -------------------------------------- */
+section {
+  text-align: center;
+  min-height: 800px;
+}
+
+section:nth-child(odd) {
+  background-color: #fbf9da;
+}
+
+section:nth-child(even) {
+  background: #baa45b;
+}
+
+section h2 {
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+section p {
+  font-size: 10px;
+  color: #666;
+}
+
+section .character-intro,
+section .author-intro,
+section .race { 
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+section .character-intro {
+  flex-flow: row wrap-reverse;
+}
+
+section .avartar {
+  height: 140px;
+}
+
+/* --------------------------------------------- */
+section .race figure,
+section .character-intro li {
+  width: 300px;
+  margin-top: 30px;
+  padding: 10px 0;
+}
+
+section .race figcaption {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ------------------------------------------ */
+
+section .awards-timeline span {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  float: right;
+  width: 150px;
+  height: 150px;
+  border: 3px solid #baa45b;
+  border-radius: 50%;
+  background: linear-gradient(rgba(235, 180, 69, 0.2), rgba(235, 201, 108, 0.3));
+}
+
+section .awards-timeline span::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+section .awards-timeline img {
+  width: 90px;
+  vertical-align: middle;
+}
+
+section .awards-timeline > li:nth-child(odd) {
+  margin-top: 20px;
+  padding-right: calc(50% - 78px);
+  text-align: right;
+}
+
+section .awards-timeline > li:nth-child(odd) span {
+  float: right;
+}
+
+section .awards-timeline li:nth-child(odd) dl{
+  margin-right: 190px;
+}
+
+section .awards-timeline > li:nth-child(even) {
+  margin-top: 62px;
+  padding-left: calc(50% - 72px);
+  text-align: left;
+}
+
+section .awards-timeline > li:nth-child(even) span {
+  float: left;
+}
+
+section .awards-timeline > li:nth-child(even) dl {
+  margin-left: 190px;
+}
+
+section .awards-timeline dt {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+section .awards-timeline dd {
+  color: #666;
+}
+
+section .awards-timeline > li {
+  position: relative;
+}
+
+section .awards-timeline > li:not(:last-child)::before {
+  content: '';
+  display: inline-block;
+  height: 68px;
+  width: 2px;
+  background-color:#baa45b;
+  position: absolute;
+  left: 50%;
+  margin-left: 2px;
+  top: 150px;
+}
+
+/* ----------------------------- */
+
+section .author-intro {
+  margin-top: 120px;
+}
+
+section .author-intro span {
+  display: inline-block;
+  margin: 10px;
+}
+
+section .author-intro img {
+  border-radius: 50%;
+  border: 3px solid #fbf9da;
+}
+
+section .author-intro .webicon {
+  margin: 4px;
+}
+
+section .author-intro .webicon:hover,
+footer .webicon:hover {
+  fill: #0869fb;
+}
+
+/* -------------------------------- */
+
+section .user-info {
+  width: 600px;
+  margin: 120px auto 0 auto;
+}
+
+section .user-info,
+section .user-info .basic-msg {
+  display: flex;
+  justify-content: space-between;
+}
+
+section .user-info .basic-msg {
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+section .user-info input,
+section .user-info textarea {
+  outline-style: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 16px;
+}
+
+section .user-info textarea {
+  resize: none;
+  margin-left: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+              url(../img/bg-logo.png) center center no-repeat;
+  background-size: contain;
+  color:#fbf9da;
+}
+
+section .user-info input {
+  height: 40px;
+}
+
+section .user-info input:focus,
+section .user-info textarea:focus {
+  border-color: #baa45b;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(235, 180, 69, 0.2),0 0 8px rgba(235, 201, 108, 0.3);
+  box-shadow: inset 0 1px 1px rgba(235, 180, 69, 0.2),0 0 8px rgba(235, 201, 108, 0.3)
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ccc;
+}
+
+
+/* ---------------------------------- */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8%;
+  position: relative;
+  bottom: 8%;
+  background: linear-gradient(rgba(235, 180, 69, 0.2), rgba(235, 201, 108, 0.3));
+}
+
+footer .webicon {
+  margin-top: 12px;
+}
+footer p {
+  color: #666;
+  font-size: 18px;
+}
+
+footer a {
+  font-size: 18px;
+  color: #baa45b;
+  margin: 0 8px;
+}
+
+footer a:hover{
+  color: #0869fb;
+}
+
