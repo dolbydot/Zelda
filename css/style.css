@@ -307,9 +307,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 8%;
-  position: relative;
-  bottom: 8%;
+  min-height: 60px;
   background: linear-gradient(rgba(235, 180, 69, 0.2), rgba(235, 201, 108, 0.3));
 }
 
